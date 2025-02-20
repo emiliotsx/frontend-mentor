@@ -1,0 +1,27 @@
+---
+const { project } = Astro.props;
+const { slug, title, description, tags } = project;
+---
+
+<article class="bg-white shadow-md p-4 rounded-2xl">
+  <h1 class="text-xl"><strong>{title}</strong></h1>
+  <p class="text-base">{description}</p>
+  <ul class="flex space-x-2 mt-2">
+    {
+      tags?.map((tag: Project) => (
+        <li class="bg-stone-100 px-2 py-1 rounded-lg text-xs">{tag}</li>
+      ))
+    }
+  </ul>
+  <div class="flex justify-center space-x-4">
+    <a
+      class="bg-black text-white px-2 py-1 rounded-lg hover:bg-black/70"
+      href={`https://github.com/emiliotsx/frontend-mentor/tree/main/${slug}`}
+      >GitHub</a
+    >
+    <a
+      class="bg-teal-900 text-white px-2 py-1 rounded-lg hover:bg-teal-900/70"
+      href={slug}>Demo</a
+    >
+  </div>
+</article>

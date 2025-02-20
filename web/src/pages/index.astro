@@ -1,0 +1,23 @@
+---
+import "../styles/global.css";
+
+import Layout from "@/layouts/Layout.astro";
+import Project from "@/components/Project.astro";
+
+import { PROJECTS } from "@/projects.ts";
+---
+
+<Layout>
+	<section>
+		<h1>Emilio González</h1>
+		<p>
+			Aca estan mis soluciones a estos ejercicios de <a
+				href="https://www.frontendmentor.io/"
+				target="_blank">Frontent Mentor</a
+			>
+		</p>
+	</section>
+	<section class="grid grid-cols-1 gap-4 md:grid-cols-3 mt-5">
+		{PROJECTS.map((project) => <Project project={project} />)}
+	</section>
+</Layout>
