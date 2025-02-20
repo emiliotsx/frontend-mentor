@@ -1,0 +1,73 @@
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-slate-300: hsl(212, 45%, 89%);
+  --color-slate-500: hsl(216, 15%, 48%);
+  --color-slate-900: hsl(218, 44%, 22%);
+  --color-green: hsl(91, 83%, 30%);
+}
+
+body {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--color-slate-300);
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--color-white);
+  width: 360px;
+  border-radius: 17px;
+  box-shadow: 0 10px 40px var(--color-slate-500);
+}
+
+.card > img {
+  padding: 15px;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.card > .card-info {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.card-info > h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-slate-900);
+}
+
+.card-info > p {
+  padding: 0 15px 15px 15px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-slate-500);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.attribution {
+  margin-top: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--color-green);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
