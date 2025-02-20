@@ -17,8 +17,5 @@ const { project } = Astro.params;
 ---
 
 <Layout>
-  <iframe
-    title="project"
-    class="w-screen h-dvh"
-    src={`/projects/${project}/index.html`}></iframe>
+  <iframe title="project" src={`/projects/${project}/index.html`}></iframe>
 </Layout>

@@ -8,13 +8,11 @@
 		<title>FrontEnd Mentor</title>
 	</head>
 	<body>
-		<main class="w-full max-w-6xl mx-auto px-6 py-2">
-			<slot />
-		</main>
+		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
 		margin: 0;
@@ -25,5 +23,10 @@
 	a {
 		color: #0070f3;
 		text-decoration: none;
+	}
+
+	iframe {
+		width: 100vw;
+		height: 100dvh;
 	}
 </style>
